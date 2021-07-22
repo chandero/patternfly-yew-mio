@@ -1,0 +1,13 @@
+html!{
+    <Dropdown
+        toggle={
+            html!{<DropdownToggle text="Foo"></DropdownToggle>}
+        }
+    >
+        <DropdownItem onclick=self.link.callback(|_|Msg::ShowToast("Clicked Foo".into()))>{"Foo"}</DropdownItem>
+        <Divider/>
+        <DropdownItem onclick=self.link.callback(|_|Msg::ShowToast("Clicked Bar".into()))>{"Bar"}</DropdownItem>
+        <Divider/>
+        <DropdownItem href="https://patternfly.org" target="_blank">{"PatternFly"}</DropdownItem>
+    </Dropdown>
+}
